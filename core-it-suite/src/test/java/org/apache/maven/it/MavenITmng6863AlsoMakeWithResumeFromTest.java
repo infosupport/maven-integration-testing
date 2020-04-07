@@ -44,7 +44,7 @@ public class MavenITmng6863AlsoMakeWithResumeFromTest
     public void testItShouldIncludeRequiredModulesInReactor()
         throws Exception
     {
-        File testDir = ResourceExtractor.simpleExtractResources( getClass(), "/mng-6863-also-make-is-ignored-with-resume-from" );
+        File testDir = ResourceExtractor.simpleExtractResources( getClass(), "/mng-6863-also-make-with-resume-from" );
 
         // 1. Sanity check, check what the full project reactor would be
         Verifier verifier = newVerifier( testDir.getAbsolutePath() );
@@ -61,15 +61,19 @@ public class MavenITmng6863AlsoMakeWithResumeFromTest
         verifier.addCliOption( "-rf" );
         verifier.addCliOption( ":module-c" );
         verifier.addCliOption( "-am" );
-        verifier.executeGoals( Collections.singletonList( "install" ) );
+        verifier.executeGoal( "compile" );
 
         verifier.setLogFileName( "log.txt" );
         List<String> logLines = verifier.loadLines( "log.txt", "UTF-8" );
         for ( String logLine : logLines )
         {
-            if ( logLine.contains( "Building independent-module") || logLine.contains( "Building parent" ) )
+            if ( logLine.contains( "Building independent-module") )
             {
-                fail( "Did not expect independent-module or parent to be built" );
+                fail( "Did not expect independent-module to be built" );
+            }
+            else if ( logLine.contains( "Building parent" ) )
+            {
+                fail( "Did not expect parent to be built" );
             }
         }
         verifier.verifyTextInLog( "Building module-a" );

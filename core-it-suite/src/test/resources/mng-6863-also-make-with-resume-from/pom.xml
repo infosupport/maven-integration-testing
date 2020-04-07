@@ -23,7 +23,7 @@ under the License.
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>mng-6863-also-make-is-ignored-with-resume-from</groupId>
+  <groupId>org.apache.maven.its.mng6863</groupId>
   <artifactId>parent</artifactId>
   <version>1.0</version>
 
