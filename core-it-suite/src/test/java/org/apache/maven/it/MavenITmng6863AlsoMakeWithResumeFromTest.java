@@ -71,13 +71,10 @@ public class MavenITmng6863AlsoMakeWithResumeFromTest
             {
                 fail( "Did not expect independent-module to be built" );
             }
-            else if ( logLine.contains( "Building parent" ) )
-            {
-                fail( "Did not expect parent to be built" );
-            }
         }
         verifier.verifyTextInLog( "Building module-a" );
         verifier.verifyTextInLog( "Building module-b" );
         verifier.verifyTextInLog( "Building module-c" );
+        verifier.verifyTextInLog( "Building parent" );
     }
 }
