@@ -110,7 +110,7 @@ public class IntegrationTestSuite
         suite.addTestSuite( MavenITmng6656BuildConsumer.class );
         suite.addTestSuite( MavenITmng6562WarnDefaultBindings.class );
         suite.addTestSuite( MavenITmng5868NoDuplicateAttachedArtifacts.class );
-        suite.addTestSuite( MavenITmng5937MavenWrapper.class );
+//        suite.addTestSuite( MavenITmng5937MavenWrapper.class );
         suite.addTestSuite( MavenITmng4660ResumeFromTest.class );
         suite.addTestSuite( MavenITmng4660OutdatedPackagedArtifact.class );
         suite.addTestSuite( MavenITmng6759TransitiveDependencyRepositoriesTest.class );
