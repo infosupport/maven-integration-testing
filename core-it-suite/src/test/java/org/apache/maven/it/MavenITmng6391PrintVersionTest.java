@@ -73,10 +73,10 @@ public class MavenITmng6391PrintVersionTest
 
         // We expect those lines in the following exact order.
         assertTrue( resultingLines.get( 0 ).startsWith( "[INFO] Reactor Summary for base-project 1.3.0-SNAPSHOT:" ) );
-        assertTrue( resultingLines.get( 1 ).startsWith( "[INFO] base-project ....................................... SUCCESS [" ) );
-        assertTrue( resultingLines.get( 2 ).startsWith( "[INFO] module-1 ........................................... SUCCESS [" ) );
-        assertTrue( resultingLines.get( 3 ).startsWith( "[INFO] module-2 ........................................... SUCCESS [" ) );
-        assertTrue( resultingLines.get( 4 ).startsWith( "[INFO] module-3 ........................................... SUCCESS [" ) );
+        assertTrue( resultingLines.get( 1 ).startsWith( "[INFO] base-project " ) );
+        assertTrue( resultingLines.get( 2 ).startsWith( "[INFO] module-1 " ) );
+        assertTrue( resultingLines.get( 3 ).startsWith( "[INFO] module-2 " ) );
+        assertTrue( resultingLines.get( 4 ).startsWith( "[INFO] module-3 " ) );
 
     }
 
@@ -107,10 +107,10 @@ public class MavenITmng6391PrintVersionTest
 
         // We expect those lines in the following exact order.
         assertTrue( resultingLines.get( 0 ).startsWith( "[INFO] Reactor Summary:" ) );
-        assertTrue( resultingLines.get( 1 ).startsWith( "[INFO] module-1 1.2.7.43.RELEASE .......................... SUCCESS [  " ) );
-        assertTrue( resultingLines.get( 2 ).startsWith( "[INFO] module-2 7.5-SNAPSHOT .............................. SUCCESS [  " ) );
-        assertTrue( resultingLines.get( 3 ).startsWith( "[INFO] module-3 1-RC1 ..................................... SUCCESS [  " ) );
-        assertTrue( resultingLines.get( 4 ).startsWith( "[INFO] base-project 1.0.0-SNAPSHOT ........................ SUCCESS [  " ) );
+        assertTrue( resultingLines.get( 1 ).startsWith( "[INFO] module-1 1.2.7.43.RELEASE " ) );
+        assertTrue( resultingLines.get( 2 ).startsWith( "[INFO] module-2 7.5-SNAPSHOT " ) );
+        assertTrue( resultingLines.get( 3 ).startsWith( "[INFO] module-3 1-RC1 " ) );
+        assertTrue( resultingLines.get( 4 ).startsWith( "[INFO] base-project 1.0.0-SNAPSHOT " ) );
 
     }
 

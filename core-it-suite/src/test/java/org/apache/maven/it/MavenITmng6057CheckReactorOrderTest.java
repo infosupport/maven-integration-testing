@@ -94,7 +94,7 @@ public class MavenITmng6057CheckReactorOrderTest
         {
             if ( start )
             {
-                if ( line.startsWith( "[INFO] -------------" ) )
+                if ( line.contains( "-<" ) && line.contains( ">-" ) )
                 {
                     start = false;
                 }
